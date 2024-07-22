@@ -1,6 +1,10 @@
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
-        int a = 2, b = 5;
+        Scanner sc = new Scanner(System.in);
+        int a = sc.nextInt();
+        int b = sc.nextInt();
 
         System.out.println((a + b) + " " + ((double)(a + b) / 2));
     }
