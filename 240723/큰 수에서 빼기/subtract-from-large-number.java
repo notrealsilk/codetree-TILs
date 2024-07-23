@@ -6,11 +6,11 @@ public class Main {
         int a = sc.nextInt();
         int b = sc.nextInt();
 
-        
-
         if (a < b) {
             System.out.println(b-a);
-           
+        }
+        if (b < a) {
+            System.out.println(a-b);
         }
 
        
