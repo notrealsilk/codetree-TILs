@@ -5,7 +5,7 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         int a = sc.nextInt();
 
-        if (a > 113) {
+        if (a >= 113) {
             System.out.println(1);
         }
         else {
