@@ -8,6 +8,8 @@ def prime(a,b):
     return prime_hap
 
 def is_prime(i):
+    if i <= 1:
+        return False
     for j in range(2, i):
         if i % j == 0:
             return False
