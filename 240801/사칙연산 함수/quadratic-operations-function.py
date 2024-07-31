@@ -8,7 +8,7 @@ def mul(a, c):
     return a * c
 
 def div(a, c):
-    return a / c
+    return int(a / c)
 
 a, o, c = input().split()
 
