@@ -4,7 +4,7 @@ word = []
 # 단어 입력받고 리스트로 만들기
 for _ in range(int(n)):
     a = input()
-    if a[0:2] == T:
+    if a.startswith(T): # 문자열 길이 관계없이 접두사 확인
         word.append(a)
 
 word.sort()
