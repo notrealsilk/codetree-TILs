@@ -8,5 +8,5 @@ for i in range(int(n)):
     if word[i][:2] == T:
         result_word.append(word[i])
 
-word.sort()
-print(word[int(k)])
+result_word.sort()
+print(result_word[int(k)-1])
