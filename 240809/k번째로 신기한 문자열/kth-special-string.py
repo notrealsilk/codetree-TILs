@@ -1,12 +1,11 @@
 n, k, T = map(str,input().split())
-word = [input() for i in range(int(n))]
-result_word = []
-
+word = []
 
 # 단어 입력받고 리스트로 만들기
-for i in range(int(n)):
-    if word[i][:2] == T:
-        result_word.append(word[i])
+for _ in range(int(n)):
+    a = input()
+    if a[0:2] == T:
+        word.append(a)
 
-result_word.sort()
-print(result_word[int(k)-1])
+word.sort()
+print(word[int(k)-1])
