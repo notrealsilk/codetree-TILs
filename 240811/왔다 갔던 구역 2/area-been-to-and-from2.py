@@ -16,8 +16,8 @@ for _ in range(n): # 6번 입력
         cur_idx += x
 
     elif dirt == "L":
-        for j in range(x,-1,-1):
-            line[cur_idx+j] += 1
+        for j in range(x,0,-1):
+            line[cur_idx-j] += 1
         cur_idx -= x
 
 
