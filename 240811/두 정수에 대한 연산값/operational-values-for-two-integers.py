@@ -5,8 +5,8 @@ def my_def(a,b):
         b += 25
         a *= 2
     else:
-        a += 2
-        b *= 25
+        a += 25
+        b *= 2
     return a, b
     
 result = my_def(a,b)
