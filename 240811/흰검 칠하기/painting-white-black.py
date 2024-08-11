@@ -1,37 +1,33 @@
 n = int(input())
 
-line = [0]*1001 # 위치 0은 line[500]
-black = [0]*1001
-white = [0]*1001
+line = [0] * 200001
+black = [0] * 200001
+white = [0] * 200001
 
-cur_idx = 500 # (위치 0) 시작 인덱스
+# 중간 지점으로 시작 위치 설정
+cur_idx = 100000
 
-w,b,g = 0,0,0
+w, b, g = 0, 0, 0
 # 흰색 1 / 검정색 2
 
-area = 0
-
-for _ in range(n): # 4번 입력
+for _ in range(n):  # n번 입력
     x, dirt = input().split()
-    x = int(x) # 정수형으로 바꾸기
+    x = int(x)  # 정수형으로 변환
 
-# 오른쪽이면 인덱스를 사용해서 오른쪽으로 x번 이동 (검정색)
+    # 검정
     if dirt == "R":
-        for i in range(x): # x번 반복
-            line[cur_idx+i] = 2
-            black[cur_idx+i] += 1
-        cur_idx += x-1   
-
-
-# 왼쪽 (흰색)
+        for i in range(x):
+            line[cur_idx + i] = 2
+            black[cur_idx + i] += 1
+        cur_idx += x - 1  # 중복된 마지막 위치를 고려하여 이동
+    # 하양
     elif dirt == "L":
         for j in range(x):
-            line[cur_idx-j] = 1
-            white[cur_idx-j] += 1
-        cur_idx -= x-1
+            line[cur_idx - j] = 1
+            white[cur_idx - j] += 1
+        cur_idx -= x - 1
 
-
-
+# 색상 계산
 for k in range(len(line)):
     if black[k] >= 2 and white[k] >= 2:
         g += 1
@@ -40,4 +36,4 @@ for k in range(len(line)):
     elif line[k] == 2:
         b += 1
 
-print(w,b,g)
+print(w, b, g)
