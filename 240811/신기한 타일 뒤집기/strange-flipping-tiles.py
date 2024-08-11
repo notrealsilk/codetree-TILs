@@ -19,15 +19,15 @@ for n in range(N):
     # 흰색 / 왼쪽 / 1
     if dirt == "L":
         # color_idx ~ color_idx+x 인덱스를 색칠
-        for i in range(color_idx, color_idx-x, -1):
-            color[i] = 1
-        color_idx -= x + 1
+        for i in range(x):
+            color[color_idx-i] = 1
+        color_idx -= x - 1
 
 
     # 검정 / 오른쪽 / 2
     if dirt == "R":
-        for i in range(color_idx, color_idx+x):
-            color[i] = 2
+        for i in range(x):
+            color[color_idx+i] = 2
         color_idx += x - 1
 
 # 갯수 카운트
