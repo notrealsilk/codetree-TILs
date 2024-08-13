@@ -1,15 +1,12 @@
-dirt = list(input())
-dir_num = 2
+dirt = input()
+dir_num = 3
 x, y = 0, 0
 dx, dy = [1, 0, -1, 0], [0, -1, 0, 1]
 
-for i in range(len(dirt)):
+for i in dirt:
     if i == "L":
-        # 시계
-        dir_num = (dir_num + 1) % 4
+        dir_num = (dir_num - 1) % 4
     elif i == "F":
-        # 반시계
-        dir_num = (dir_num - 1 + 4) % 4
+        x, y = x + dx[dir_num], y + dy[dir_num]
 
-    nx, ny = x + dx[dir_num], y + dy[dir_num]
-print(nx, ny)
+print(x, y)
