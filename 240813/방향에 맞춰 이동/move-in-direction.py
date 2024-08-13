@@ -1,7 +1,7 @@
 N = int(input())
 x,y = 0,0
 
-for i in range(4):
+for i in range(N):
     dirt, loc = input().split()
     loc = int(loc)
     if dirt == "N":
