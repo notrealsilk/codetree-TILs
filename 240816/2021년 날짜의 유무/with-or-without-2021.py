@@ -11,6 +11,7 @@ def Day(M,D):
             return "Yes"
     else:
         return "No"
+    return "No"
 
 
 # M: 월 /D: 일
