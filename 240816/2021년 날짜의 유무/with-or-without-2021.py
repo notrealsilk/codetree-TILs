@@ -6,10 +6,11 @@ def Day(M,D):
     elif M in [4,6,9,11]:
         if 1<= D <= 30:
             return "Yes"
-    else:
+    elif M == 2:
         if 1<= D <= 28:
             return "Yes"
-    return "No"
+    else:
+        return "No"
 
 
 # M: 월 /D: 일
