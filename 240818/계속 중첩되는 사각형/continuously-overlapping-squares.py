@@ -1,5 +1,5 @@
 n = int(input())
-arr = [[0]*200 for _ in range(200)]
+arr = [[0]*201 for _ in range(201)]
 
 area = 0
 
